@@ -52,6 +52,7 @@ class LoginFormComponent extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(14.0),
                         child: TextFormField(
+                          obscureText: true,
                           decoration: const InputDecoration(
                             label: Text("Masukan Password"),
                             isDense: true,
@@ -61,7 +62,9 @@ class LoginFormComponent extends StatelessWidget {
                         ),
                       ),
                       ElevatedButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.toNamed('/home');
+                        },
                         icon: const Icon(Icons.login),
                         label: const Text("Masuk"),
                       ),
